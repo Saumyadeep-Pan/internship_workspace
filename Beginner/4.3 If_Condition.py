@@ -1,13 +1,11 @@
-australia = ["Sydney", "Melbourne", "Brisbane", "Perth"]
-uae = ["Dubai", "Abu Dhabi", "Sharjah", "Ajman"]
-india = ["Mumbai", "Bangalore", "Chennai", "Delhi"]
+australia = ["Sydney","Melbourne","Brisbane","Perth"]
+uae = ["Dubai","Abu Dhabi","Sharjah","Ajman"]
+india = ["Mumbai","Bangalore","Chennai","Delhi"]
+first_input=input("Enter the first city: ")
+second_input=input("Enter the second city: ")
 
-first_input = input("Enter the first city: ")
-second_input = input("Enter the second city: ")
-
-city_one = first_input.strip().title()
-city_two = second_input.strip().title()
-
+city_one=first_input.strip().title()
+city_two=second_input.strip().title()
 
 def find_country(city):
     if city in australia:
@@ -18,9 +16,8 @@ def find_country(city):
         return "India"
     return None
 
-
-country_one = find_country(city_one)
-country_two = find_country(city_two)
+country_one=find_country(city_one)
+country_two=find_country(city_two)
 
 if country_one is None or country_two is None:
     print('Output: "where are you from?"')
