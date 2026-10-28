@@ -57,14 +57,12 @@ def get_random_word(word_dict):
     word=random.choice(word_dict[category])
     return category, word
 
-
 def display_game_state(hangman_pics,missed_letters,correct_letters,secret_word):
     print(hangman_pics[len(missed_letters)])
     print("\nMissed letters:", " ".join(missed_letters) if missed_letters else "None")
     blanks=[letter if letter in correct_letters else "_" for letter in secret_word]
     print("Word:", " ".join(blanks))
     print()
-
 
 def get_guess(already_guessed):
     while True:
